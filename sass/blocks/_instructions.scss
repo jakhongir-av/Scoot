@@ -1,44 +1,77 @@
 .instructions {
-    // position: relative;
+    position: relative;
     padding: 160px 0;
+    z-index: -1;
+}
 
-    background-image: url("../images/instructions-line.png");
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: left top 200px;
-
-    @include maxwidth(1345px) {
-        background-position: left -100px top 200px;  
-    }   
-    
-    @include maxwidth (1170px) {
-        background-position: left -208px top 200px;
-    }
-    
-    @include maxwidth(1124px) {
-        background-position: left -200px top 200px;
-    }
-
-    @include maxwidth(1023px) {
-        background-position: left -290px top 200px;
-    }
-
-    @include maxwidth(895px) {
-
-    } 
+.instructions__mobile_line {
+    background-image: url("../images/instructions-lin2.png");
 }
 
 
-.instructions > hr {
-display: none;
+.instructions__line {
+    // display: none;
 
-    // position: absolute;
-    // top: 200px;
-    // left: o;
-    // width: 974px;
-    // height: 15px;
-    // border: none;
-    // background-color: #E5ECF4;
+    position: absolute;
+    top: 200px;
+    left: o;
+    width: 974px;
+    height: 15px;
+    z-index: -1;
+    border: none;
+    background-color: #E5ECF4;
+
+    @include maxwidth(1350px) {
+        width: 879px;
+    }
+
+    @include maxwidth(1170px) {
+        width: 769px;
+    }
+
+    @include maxwidth(1015px) {
+        width: 674px;
+    }
+
+    @include maxwidth(895px) {
+        display: none;
+    }
+}
+
+.instructions__line2 {
+    display: none;
+    z-index: -1;
+    width: 15px;
+    height: 650px;
+    border: none;
+    background-color: #E5ECF4;
+    top: 0;
+    left: 111px;
+
+    @include maxwidth(895px) {
+        display: block;
+        position: absolute;
+    }
+
+    @include maxwidth(688px) {
+        height: 755px;
+    }
+
+    @include maxwidth(540px) {
+        left: 80px;
+    }
+
+    @include maxwidth(501px) {
+        height: 855px;
+    }
+
+    @include maxwidth(464px) {
+        height: 933px;
+    }
+
+    @include maxwidth(426px) {
+        display: none;
+    }
 }
 
 .instructions__list {
@@ -49,6 +82,28 @@ display: none;
         padding: 0 70px;
     }
 
+    @include maxwidth(895px) {
+        flex-wrap: wrap;
+    }
+
+    @include maxwidth(540px) {
+        padding: 0 40px;
+    }
+
+}
+
+.instructions__list_items {
+    @include maxwidth(895px) {
+        display: flex;
+        gap: 79px;
+        align-items: center;
+    }
+
+    @include maxwidth(426px) {
+        display: flex;
+        flex-direction: column;
+        gap: 0px
+    }
 }
 
 .instructions__icon1 {
@@ -79,6 +134,10 @@ display: none;
 
     margin-top: 40px;
     margin-bottom: 27px;
+
+    @include maxwidth(426px) {
+        text-align: center;
+    }
 }
 
 .instructions__list_items p {
@@ -89,4 +148,12 @@ display: none;
     font-size: 15px;
     line-height: 25px;
     color: #939CAA;
+
+    @include maxwidth(895px) {
+        max-width: 398px;
+    }
+
+    @include maxwidth(426px) {
+        text-align: center;
+    }
 }

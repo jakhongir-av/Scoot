@@ -113,13 +113,13 @@
     .plus {
         display: none;
         color: $btn-color;
-        transform: rotate(-45deg);
     }
 }
 
 .menu {
     position: absolute;
     appearance: none;
+    transition: all 0.5s ease;
 
     &:checked ~ .header__nav_list {
         transform: translateX(0);
@@ -131,6 +131,7 @@
 
     &:checked ~ .header__menu .plus {
         display: block;
+        transform: rotate(-45deg);
     }
 }
 

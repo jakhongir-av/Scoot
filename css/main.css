@@ -166,7 +166,6 @@ body {
 .header__menu .plus {
   display: none;
   color: #FCB72B;
-  transform: rotate(-45deg);
 }
 
 .menu {
@@ -174,6 +173,7 @@ body {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  transition: all 0.5s ease;
 }
 .menu:checked ~ .header__nav_list {
   transform: translateX(0);
@@ -183,6 +183,7 @@ body {
 }
 .menu:checked ~ .header__menu .plus {
   display: block;
+  transform: rotate(-45deg);
 }
 
 .header__nav_List_items a {
@@ -436,34 +437,86 @@ main {
 }
 
 .instructions {
+  position: relative;
   padding: 160px 0;
-  background-image: url("../images/instructions-line.png");
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-position: left top 200px;
+  z-index: -1;
 }
-@media (max-width: 1345px) {
-  .instructions {
-    background-position: left -100px top 200px;
+
+.instructions__mobile_line {
+  background-image: url("../images/instructions-lin2.png");
+}
+
+.instructions__line {
+  position: absolute;
+  top: 200px;
+  left: o;
+  width: 974px;
+  height: 15px;
+  z-index: -1;
+  border: none;
+  background-color: #E5ECF4;
+}
+@media (max-width: 1350px) {
+  .instructions__line {
+    width: 879px;
   }
 }
 @media (max-width: 1170px) {
-  .instructions {
-    background-position: left -208px top 200px;
+  .instructions__line {
+    width: 769px;
   }
 }
-@media (max-width: 1124px) {
-  .instructions {
-    background-position: left -200px top 200px;
+@media (max-width: 1015px) {
+  .instructions__line {
+    width: 674px;
   }
 }
-@media (max-width: 1023px) {
-  .instructions {
-    background-position: left -290px top 200px;
+@media (max-width: 895px) {
+  .instructions__line {
+    display: none;
   }
 }
-.instructions > hr {
+
+.instructions__line2 {
   display: none;
+  z-index: -1;
+  width: 15px;
+  height: 650px;
+  border: none;
+  background-color: #E5ECF4;
+  top: 0;
+  left: 111px;
+}
+@media (max-width: 895px) {
+  .instructions__line2 {
+    display: block;
+    position: absolute;
+  }
+}
+@media (max-width: 688px) {
+  .instructions__line2 {
+    height: 755px;
+  }
+}
+@media (max-width: 540px) {
+  .instructions__line2 {
+    left: 80px;
+  }
+}
+@media (max-width: 501px) {
+  .instructions__line2 {
+    height: 855px;
+  }
+}
+@media (max-width: 464px) {
+  .instructions__line2 {
+    height: 933px;
+  }
+}
+@media (max-width: 426px) {
+  .instructions__line2 {
+    display: none;
+  }
 }
 
 .instructions__list {
@@ -475,12 +528,38 @@ main {
     padding: 0 70px;
   }
 }
+@media (max-width: 895px) {
+  .instructions__list {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 540px) {
+  .instructions__list {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 895px) {
+  .instructions__list_items {
+    display: flex;
+    gap: 79px;
+    align-items: center;
+  }
+}
+@media (max-width: 426px) {
+  .instructions__list_items {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+}
 
 .instructions__icon1 {
   display: block;
   width: 96px;
   height: 96px;
   border-radius: 50%;
+  flex-shrink: 0;
   background: #FCB72B;
   background-image: url("../images/instructions-icon1.svg");
   background-repeat: no-repeat;
@@ -492,6 +571,7 @@ main {
   width: 96px;
   height: 96px;
   border-radius: 50%;
+  flex-shrink: 0;
   background: #FCB72B;
   background-image: url("../images/instructions-icon2.svg");
   background-repeat: no-repeat;
@@ -503,6 +583,7 @@ main {
   width: 96px;
   height: 96px;
   border-radius: 50%;
+  flex-shrink: 0;
   background: #FCB72B;
   background-image: url("../images/instructions-icon3.svg");
   background-repeat: no-repeat;
@@ -518,6 +599,11 @@ main {
   margin-top: 40px;
   margin-bottom: 27px;
 }
+@media (max-width: 426px) {
+  .instructions__list_items h3 {
+    text-align: center;
+  }
+}
 
 .instructions__list_items p {
   font-family: "Lexend Deca";
@@ -527,4 +613,14 @@ main {
   font-size: 15px;
   line-height: 25px;
   color: #939CAA;
+}
+@media (max-width: 895px) {
+  .instructions__list_items p {
+    max-width: 398px;
+  }
+}
+@media (max-width: 426px) {
+  .instructions__list_items p {
+    text-align: center;
+  }
 }/*# sourceMappingURL=main.css.map */

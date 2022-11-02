@@ -433,4 +433,98 @@ main {
 .intro__p_btn > a:hover {
   background: transparent;
   color: #FCB72B;
+}
+
+.instructions {
+  padding: 160px 0;
+  background-image: url("../images/instructions-line.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: left top 200px;
+}
+@media (max-width: 1345px) {
+  .instructions {
+    background-position: left -100px top 200px;
+  }
+}
+@media (max-width: 1170px) {
+  .instructions {
+    background-position: left -208px top 200px;
+  }
+}
+@media (max-width: 1124px) {
+  .instructions {
+    background-position: left -200px top 200px;
+  }
+}
+@media (max-width: 1023px) {
+  .instructions {
+    background-position: left -290px top 200px;
+  }
+}
+.instructions > hr {
+  display: none;
+}
+
+.instructions__list {
+  display: flex;
+  gap: 30px;
+}
+@media (max-width: 1170px) {
+  .instructions__list {
+    padding: 0 70px;
+  }
+}
+
+.instructions__icon1 {
+  display: block;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: #FCB72B;
+  background-image: url("../images/instructions-icon1.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.instructions__icon2 {
+  display: block;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: #FCB72B;
+  background-image: url("../images/instructions-icon2.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.instructions__icon3 {
+  display: block;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: #FCB72B;
+  background-image: url("../images/instructions-icon3.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.instructions__list_items h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -1.07143px;
+  color: #495567;
+  margin-top: 40px;
+  margin-bottom: 27px;
+}
+
+.instructions__list_items p {
+  font-family: "Lexend Deca";
+  font-style: normal;
+  max-width: 350px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  color: #939CAA;
 }/*# sourceMappingURL=main.css.map */

@@ -42,3 +42,11 @@
         color: $btn-color;
     }
 }
+
+@mixin instructions-oval {
+    display: block;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background: #FCB72B; 
+}

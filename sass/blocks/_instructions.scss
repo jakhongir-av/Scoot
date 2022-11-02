@@ -1,0 +1,92 @@
+.instructions {
+    // position: relative;
+    padding: 160px 0;
+
+    background-image: url("../images/instructions-line.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: left top 200px;
+
+    @include maxwidth(1345px) {
+        background-position: left -100px top 200px;  
+    }   
+    
+    @include maxwidth (1170px) {
+        background-position: left -208px top 200px;
+    }
+    
+    @include maxwidth(1124px) {
+        background-position: left -200px top 200px;
+    }
+
+    @include maxwidth(1023px) {
+        background-position: left -290px top 200px;
+    }
+
+    @include maxwidth(895px) {
+
+    } 
+}
+
+
+.instructions > hr {
+display: none;
+
+    // position: absolute;
+    // top: 200px;
+    // left: o;
+    // width: 974px;
+    // height: 15px;
+    // border: none;
+    // background-color: #E5ECF4;
+}
+
+.instructions__list {
+    display: flex;
+    gap: 30px;
+
+    @include maxwidth(1170px) {
+        padding: 0 70px;
+    }
+
+}
+
+.instructions__icon1 {
+    @include instructions-oval;
+    background-image: url("../images/instructions-icon1.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.instructions__icon2 {
+    @include instructions-oval;
+    background-image: url("../images/instructions-icon2.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.instructions__icon3 {
+    @include instructions-oval;
+    background-image: url("../images/instructions-icon3.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.instructions__list_items h3 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -1.07143px;
+    color: #495567;
+
+    margin-top: 40px;
+    margin-bottom: 27px;
+}
+
+.instructions__list_items p {
+    font-family: 'Lexend Deca';
+    font-style: normal;
+    max-width: 350px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    color: #939CAA;
+}

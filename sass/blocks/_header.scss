@@ -2,6 +2,7 @@
     position: fixed;
     width: 100%;
     background: $main-color;
+    z-index: 9999;
 }
 
 .header__container {
@@ -24,14 +25,6 @@
     }
 }
 
-.header__menu {
-    display: none;
-
-    @include maxwidth(425px) {
-        display: block;
-    }
-}
-
 .header__nav {
     display: flex;
     align-items: center;
@@ -48,6 +41,14 @@
     @include maxwidth(425px) {
         gap: 50%;
     }
+
+    @include maxwidth(424px) {
+        gap: 90%;
+    }
+
+    @include maxwidth(275px) {
+        gap: 40%;
+    }
 }
 
 .header__nav_list {
@@ -61,6 +62,59 @@
     @include maxwidth(425px) {
         display: none;
     }
+
+    @include maxwidth(425px) {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 68%;
+        padding: 64px 32px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        height: 100vh;
+        background: #333A44;
+        transform: translateX(-100%);
+        transition: all 0.5s ease;
+    }
+}
+
+.header__menu {
+    display: none;
+
+    @include maxwidth(425px) {
+        display: block;
+    }
+
+    .burger {
+        color: $btn-color;
+    }
+
+    .plus {
+        display: none;
+        color: $btn-color;
+        transform: rotate(-45deg);
+    }
+}
+
+.menu {
+    position: absolute;
+    appearance: none;
+
+    &:checked ~ .header__nav_list {
+        transform: translateX(0);
+    }
+
+    &:checked ~ .header__menu .burger {
+        display: none;
+    }
+
+    &:checked ~ .header__menu .plus {
+        display: block;
+    }
 }
 
 .header__nav_List_items a {
@@ -73,6 +127,39 @@
         font-size: 12px;
     }
 
+    @include maxwidth(425px) {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 25px;
+        color: #E5ECF4;
+    }
+
+}
+
+.header__items_btn a {
+    @include btn;
+    display: none;
+    text-align: center;
+
+    @include maxwidth(425px) {
+        display: block;
+        margin-top: 90%;
+    }
+
+    @include maxwidth(366px) {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+
+    @include maxwidth(291px) {
+        padding: 5px 10px;
+        font-size: 9;
+    }
+
+    @include maxwidth(261px)  {
+        padding: 1px 5px;
+        font-size: 6;
+    }
 }
 
 .header__btn a {

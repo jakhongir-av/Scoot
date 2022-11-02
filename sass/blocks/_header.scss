@@ -29,7 +29,7 @@
     align-items: center;
     gap: 58px;
 
-    @include maxwidth(690px) {
+    @include maxwidth(691px) {
         gap: 25px;
     }
 
@@ -181,6 +181,10 @@
 
 .header__btn a {
     @include btn;
+
+    @include maxwidth(657px) {
+        padding: 12px 30px;
+    }
 
     @include maxwidth(645px) {
         font-size: 11;

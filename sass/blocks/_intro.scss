@@ -6,6 +6,7 @@ main {
     background-image: url("../images/intro-bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 @media
@@ -20,22 +21,67 @@ only screen and (min-resolution: 2dppx) {
     }
 }
 
+.intro__container {
+    @include maxwidth(1170px) {
+        padding: 0 65px;
+    }
+
+    @include maxwidth(768px) {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 .intro__bg-line1 {
     background-image: url("../images/intro-line1.png");
     background-repeat: no-repeat;
     background-size: auto;
     background-position: left 1px top 190px;
+
+    @include maxwidth(768px) {
+        background-image: none;
+    }
 }
 
 .intro__bg-line2 {
     background-image: url("../../images/intro-line2.png");
     background-repeat: no-repeat;
     background-size: auto;
-    background-position: right 300px top 338px;
+    background-position: right 300px top 343px;
+
+    @include maxwidth(768px) {
+        background-position: left -100px top 500px;
+    }
+
+    @include maxwidth(578px) {
+        background-position: left -150px top 410px;
+    }
+
+    @include maxwidth(453px) {
+        background-position: left -200px top 450px;
+    }
+
+    @include maxwidth(406px) {
+        background-position: left -200px top 499px;
+    }
+
+    @include maxwidth(389px) {
+        background-position: right 210px top 530px;
+    }
 }
 
 .intro__bg-line2 {
     padding: 153px 0;
+
+    @include maxwidth(768px) {
+        padding-bottom: 217px;
+    }
+
+    @include maxwidth(578px) {
+        padding: 115px 0;
+    }
 }
 
 .intro__container > h2 {
@@ -46,11 +92,25 @@ only screen and (min-resolution: 2dppx) {
     letter-spacing: -2.5px;
     color: $main-color;
 
-    @include 
+    @include maxwidth(768px) {
+        text-align: center;
+    }
+
+    @include maxwidth(578px) {
+        font-size: 35px;
+    }
 }
 
 .intro__p_btn {
     margin-left: 90px;
+
+    @include maxwidth(768px) {
+        margin-left: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .intro__p_btn > p {
@@ -62,8 +122,17 @@ only screen and (min-resolution: 2dppx) {
     font-size: 15px;
     line-height: 25px;
     color: $main-color;
+
+    @include maxwidth(768px) {
+        text-align: center;
+    }
+
+    @include maxwidth(578px) {
+        font-size: 13px;
+    }
 }
 
 .intro__p_btn > a {
     @include btn;
+    max-width: 190px;
 }

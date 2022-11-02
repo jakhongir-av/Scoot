@@ -1,3 +1,69 @@
-.intro__container {
-    
+main {
+    padding-top: 96px;
+}
+
+.intro {
+    background-image: url("../images/intro-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and ( min-moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and ( min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+    .section1__banner{
+        background-image: url(../../images/intro-bg@2x.jpg);
+    }
+}
+
+.intro__bg-line1 {
+    background-image: url("../images/intro-line1.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: left 1px top 190px;
+}
+
+.intro__bg-line2 {
+    background-image: url("../../images/intro-line2.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: right 300px top 338px;
+}
+
+.intro__bg-line2 {
+    padding: 153px 0;
+}
+
+.intro__container > h2 {
+    font-weight: 700;
+    max-width: 500px;
+    font-size: 56px;
+    line-height: 56px;
+    letter-spacing: -2.5px;
+    color: $main-color;
+
+    @include 
+}
+
+.intro__p_btn {
+    margin-left: 90px;
+}
+
+.intro__p_btn > p {
+    font-family: 'Lexend Deca';
+    font-style: normal;
+    max-width: 405px;
+    margin: 40px 0;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    color: $main-color;
+}
+
+.intro__p_btn > a {
+    @include btn;
 }

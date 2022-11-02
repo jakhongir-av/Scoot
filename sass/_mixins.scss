@@ -36,10 +36,9 @@
     border: 3px solid $btn-color;
     color: $main-color;
     background: $btn-color;
-    transition: all 0.3s ease;
 
     &:hover {
-        background: $main-color;
+        background: transparent;
         color: $btn-color;
     }
 }

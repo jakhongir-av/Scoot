@@ -38,16 +38,34 @@
         gap: 20%;
     }
 
-    @include maxwidth(425px) {
+    @include maxwidth(426px) {
+        gap: 125%;   
+    }
+
+    @include maxwidth(376px) {
+        gap: 100%;
+    }
+
+    @include maxwidth(320px) {
+        gap: 75%;
+    }
+
+    @include maxwidth(290px) {
         gap: 50%;
     }
+}
 
-    @include maxwidth(424px) {
-        gap: 90%;
+.desktop-logo {
+    display: block;
+    @include maxwidth(426px) {
+        display: none;
     }
+}
 
-    @include maxwidth(275px) {
-        gap: 40%;
+.mobile-logo {
+    display: none;
+    @include maxwidth(426px) {
+        display: block;
     }
 }
 
@@ -59,16 +77,16 @@
         gap: 20px;
     }
 
-    @include maxwidth(425px) {
+    @include maxwidth(426px) {
         display: none;
     }
 
-    @include maxwidth(425px) {
+    @include maxwidth(426px) {
         display: block;
         position: absolute;
         top: 100%;
         left: 0;
-        width: 68%;
+        width: 70%;
         padding: 64px 32px;
 
         display: flex;
@@ -85,7 +103,7 @@
 .header__menu {
     display: none;
 
-    @include maxwidth(425px) {
+    @include maxwidth(426px) {
         display: block;
     }
 
@@ -127,7 +145,7 @@
         font-size: 12px;
     }
 
-    @include maxwidth(425px) {
+    @include maxwidth(426px) {
         font-weight: 700;
         font-size: 18px;
         line-height: 25px;
@@ -141,7 +159,7 @@
     display: none;
     text-align: center;
 
-    @include maxwidth(425px) {
+    @include maxwidth(426px) {
         display: block;
         margin-top: 90%;
     }

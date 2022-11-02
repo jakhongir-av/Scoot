@@ -295,7 +295,7 @@ main {
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .section1__banner {
-    background-image: url(../../images/intro-bg@2x.jpg);
+    background-image: url(../images/intro-bg@2x.jpg);
   }
 }
 @media (max-width: 1170px) {
@@ -804,4 +804,44 @@ main {
 .info__list_items_h > a:hover {
   background: transparent;
   color: #FCB72B;
+}
+
+.apps {
+  margin-top: 200px;
+}
+
+.apps__container {
+  padding: 102px 165px;
+  background-image: url("../images/apps-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right bottom;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .apps__container .section1__banner {
+    background-image: url(../images/apps-bg@2x.jpg);
+  }
+}
+
+.apps__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.apps__container > h4 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 48px;
+  letter-spacing: -2.14286px;
+  max-width: 415px;
+  color: #FFFFFF;
+}
+
+.googleplay-mob {
+  display: none;
+}
+@media (max-width: 768px) {
+  .googleplay-mob {
+    display: block;
+  }
 }/*# sourceMappingURL=main.css.map */

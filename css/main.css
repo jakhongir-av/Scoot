@@ -808,40 +808,80 @@ main {
 
 .apps {
   margin-top: 200px;
-}
-
-.apps__container {
-  padding: 102px 165px;
   background-image: url("../images/apps-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right bottom;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  .apps__container .section1__banner {
+  .apps .section1__banner {
     background-image: url(../images/apps-bg@2x.jpg);
+  }
+}
+
+.apps__container {
+  padding: 102px 0;
+}
+@media (max-width: 1170px) {
+  .apps__container {
+    padding: 102px 50px;
   }
 }
 
 .apps__container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 878px) {
+  .apps__container {
+    flex-direction: column;
+    gap: 40px;
+  }
 }
 
 .apps__container > h4 {
   font-weight: 700;
-  font-size: 48px;
+  font-size: 44px;
   line-height: 48px;
   letter-spacing: -2.14286px;
   max-width: 415px;
   color: #FFFFFF;
 }
+@media (max-width: 878px) {
+  .apps__container > h4 {
+    text-align: center;
+    max-width: 457px;
+  }
+}
+@media (max-width: 426px) {
+  .apps__container > h4 {
+    font-size: 32px;
+    max-width: 311px;
+  }
+}
 
-.googleplay-mob {
-  display: none;
+.apps__store {
+  display: flex;
+  gap: 18px;
+}
+
+.googleplay {
+  width: 159px;
+  border-radius: 4px;
 }
 @media (max-width: 768px) {
-  .googleplay-mob {
-    display: block;
+  .googleplay {
+    width: 114px;
+  }
+}
+
+.appstore {
+  width: 182px;
+  border-radius: 4px;
+}
+@media (max-width: 768px) {
+  .appstore {
+    width: 130px;
   }
 }/*# sourceMappingURL=main.css.map */

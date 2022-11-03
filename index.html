@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/all.min.css">
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/main.min.css">
     <title>Scoot</title>
 </head>
 
@@ -20,11 +20,11 @@
                     <i class="fa-solid fa-plus fa-2x plus"></i>
                 </label>
                 <div class="header__logo">
-                    <img class="desktop-logo" src="./images/scoot-logo.svg" alt="Scoot">
-                    <img class="mobile-logo" src="./images/scoot-mobile-logo.svg" alt="Scoot">
+                    <a href="#top"><img class="desktop-logo" src="./images/scoot.svg" alt="Scoot"></a>
+                    <a href="#top"><img class="mobile-logo" src="./images/scoot-mobile-logo.svg" alt="Scoot"></a>
                 </div>
                 <ul class="header__nav_list">
-                    <li class="header__nav_List_items"><a href="#">About</a></li>
+                    <li class="header__nav_List_items"><a href="#about.html">About</a></li>
                     <li class="header__nav_List_items"><a href="#">Location</a></li>
                     <li class="header__nav_List_items"><a href="#">Careers</a></li>
                     <li class="header__items_btn"><a href="#">Get Scootin</a></li>
@@ -37,7 +37,7 @@
     </header>
 
     <main>
-        <section class="intro">
+        <section id="top" class="intro">
             <div class="intro__bg-line2">
                 <div class="intro__bg-line1">
                     <div class="container intro__container">
@@ -115,7 +115,7 @@
                             <source media="(max-width: 486px)" srcset="./images/info-mobile-img.png 1x,
                                     ./images/info-mobile-img@2x.png 2x">
 
-                            <source srcset="./images/info-img.png 1x,
+                            <source type="image/png" srcset="./images/info-img.png 1x,
                                     ./images/info-img@2x.png 2x">
 
                             <img src="./images/info-img.png"
@@ -141,7 +141,7 @@
                             <source media="(max-width: 486px)" srcset="./images/info-mobile-img2.png 1x,
                                     ./images/info-mobile-img2@2x.png 2x">
 
-                            <source srcset="./images/info-img.png 1x,
+                            <source type="image/png" srcset="./images/info-img.png 1x,
                                     ./images/info-img@2x.png 2x">
 
                             <img src="./images/info-img2.png"
@@ -167,7 +167,7 @@
                             <source media="(max-width: 486px)" srcset="./images/info-mobile-img3.png 1x,
                                     ./images/info-mobile-img3@2x.png 2x">
 
-                            <source srcset="./images/info-img3.png 1x,
+                            <source type="image/png" srcset="./images/info-img3.png 1x,
                                     ./images/info-img3@2x.png 2x">
 
                             <img src="./images/info-img3.png"
@@ -195,9 +195,9 @@
     <footer>
         <div class="container footer__container">
             <nav class="footer__nav">
-                <img src="./images/footer-logo.svg" alt="Scoot">
+                <a href="#top"><img src="./images/footer-logo.svg" alt="Scoot"></a>
                 <div class="footer__nav_list">
-                    <a href="#">About</a>
+                    <a href="about.html">About</a>
                     <a href="#">Location</a>
                     <a href="#">Cureers</a>
                 </div>
@@ -209,7 +209,7 @@
                 <a href="#">
                     <img src="./images/twitter.png" alt="social networks">
                 </a>
-                <a href="#">
+                <a href="index.html">
                     <img src="./images/instagram.svg" alt="social networks">
                 </a>
             </div>

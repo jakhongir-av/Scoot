@@ -884,4 +884,78 @@ main {
   .appstore {
     width: 130px;
   }
+}
+
+footer {
+  background: #333A44;
+}
+
+.footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 35px 0;
+}
+@media (max-width: 1170px) {
+  .footer__container {
+    padding: 35px 60px;
+  }
+}
+@media (max-width: 620px) {
+  .footer__container {
+    flex-direction: column;
+    gap: 87px;
+  }
+}
+
+.footer__nav {
+  display: flex;
+  align-items: center;
+  gap: 59px;
+}
+@media (max-width: 675px) {
+  .footer__nav {
+    gap: 30px;
+  }
+}
+@media (max-width: 620px) {
+  .footer__nav {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+.footer__nav_list {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+@media (max-width: 675px) {
+  .footer__nav_list {
+    gap: 25px;
+  }
+}
+@media (max-width: 620px) {
+  .footer__nav_list {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+.footer__nav_list > a {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 25px;
+  color: #939CAA;
+}
+@media (max-width: 700px) {
+  .footer__nav_list > a {
+    font-size: 13px;
+  }
+}
+
+.footer__links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
 }/*# sourceMappingURL=main.css.map */
